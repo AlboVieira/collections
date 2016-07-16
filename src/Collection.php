@@ -89,4 +89,9 @@ class Collection implements CollectionContract
         }
     }
 
+    public function sort(){
+        $this->content->asort();
+        return $this;
+    }
+
 }

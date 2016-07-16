@@ -7,6 +7,9 @@ $collection = new \Collections\Collection();
 $collection->add(['name' => 'John'], 1);
 $collection->add(2);
 
+$collection->reverse();
+var_dump($collection);die;
+
 /** Removing data */
 $collection->remove(2);
 
