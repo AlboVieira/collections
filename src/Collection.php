@@ -2,10 +2,12 @@
 
 namespace Collections;
 
-class Collection
-{
+use Collections\Contract\CollectionContract;
 
-    private $content;
+class Collection implements CollectionContract
+{
+    /** @var  \ArrayIterator */
+    protected $content;
 
     public function __construct()
     {
@@ -85,6 +87,11 @@ class Collection
         foreach ($filtered as $key=>$item){
             $this->add($item,$key);
         }
+    }
+
+    public function sort(){
+        $this->content->asort();
+        return $this;
     }
 
 }
