@@ -2,17 +2,10 @@
 
 namespace Collections;
 
-use Collections\Contract\CollectionContract;
-
-class Collection implements CollectionContract
+abstract class AbstractCollection
 {
     /** @var  \ArrayIterator */
     protected $content;
-
-    public function __construct()
-    {
-        $this->content = new \ArrayIterator();
-    }
 
     public function add($element, $key = null)
     {
